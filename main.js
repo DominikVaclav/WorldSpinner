@@ -30,7 +30,7 @@ const t2 = gsap.timeline({ defaults: { duration:2 }})
 const loader = new FBXLoader();
 let earth;
 let sun;
-loader.load( './public/earth.fbx', function ( object ) {
+loader.load( '/earth.fbx', function ( object ) {
 
   earth = object;
   earth.scale.set(0.02, 0.02, 0.02)
@@ -41,7 +41,7 @@ loader.load( './public/earth.fbx', function ( object ) {
   t2.fromTo("h1", { opacity: 0 }, { opacity : 1 })
 
 });
-loader.load( './public/sun.fbx', function ( fbx ) {
+loader.load( '/sun.fbx', function ( fbx ) {
 
   sun = fbx;
   sun.scale.set(0.01, 0.01, 0.01)
